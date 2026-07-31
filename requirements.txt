@@ -1,0 +1,36 @@
+# Core AI
+langchain>=0.3.27
+langchain-core>=0.3.74
+langchain-community>=0.3.27
+langchain-text-splitters>=0.3.9
+langchain-huggingface>=0.3.1
+langchain-groq>=0.3.7
+langgraph>=0.6.6
+langsmith>=0.4.16
+
+# LLM
+groq>=0.31.0
+
+# Embeddings
+sentence-transformers>=5.1.0
+transformers>=4.55.0
+torch>=2.8.0
+
+# Vector Database
+faiss-cpu>=1.11.0
+
+# PDF
+pypdf>=6.0.0
+
+# UI
+gradio>=5.42.0
+
+# Environment
+python-dotenv>=1.1.1
+
+# Validation
+pydantic>=2.11.7
+
+# Data
+numpy>=2.3.2
+pandas>=2.3.1
