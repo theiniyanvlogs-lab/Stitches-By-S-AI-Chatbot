@@ -23,7 +23,8 @@ faiss-cpu>=1.11.0
 pypdf>=6.0.0
 
 # UI
-gradio>=5.42.0
+#gradio>=5.42.0
+gradio>=5.42.0,<6.0.0
 
 # Environment
 python-dotenv>=1.1.1
