@@ -1,5 +1,15 @@
 # 👗 Stitches By S AI Chatbot
 
+Stitches-By-S-AI-Chatbot_Vector Database Creation
+
+https://colab.research.google.com/drive/1KjxBSOUROFdR5_gykERQBr6NLAh_jIkr#scrollTo=2fM-vSrwLM3S
+
+========
+
+Stitches-By-S-AI-Chatbot_Google_collab_Run
+
+https://colab.research.google.com/drive/1NfNPIFtdEzgrHln9VJX_YXH6Vb-Gen0T#scrollTo=PUncBMR9fISE
+
 > **AI-Powered Multi-Agent Tailoring Knowledge Assistant using LangGraph, LangChain, RAG, FAISS, Groq LLM, and Gradio**
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
