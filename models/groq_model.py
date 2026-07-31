@@ -4,7 +4,6 @@ Stitches By S AI Chatbot
 """
 
 import os
-
 from langchain_groq import ChatGroq
 from config import LLM_MODEL
 
@@ -19,13 +18,11 @@ def get_llm(temperature: float = 0.2):
 
     if not groq_api_key:
         raise ValueError(
-            "GROQ_API_KEY not found. Set it in your environment or .env file."
+            "GROQ_API_KEY not found. Please set it in Colab Secrets, Render Environment, or a .env file."
         )
 
-    llm = ChatGroq(
+    return ChatGroq(
         api_key=groq_api_key,
         model=LLM_MODEL,
         temperature=temperature,
     )
-
-    return llm
