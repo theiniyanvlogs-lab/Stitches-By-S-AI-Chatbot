@@ -5,6 +5,24 @@ Build Business Knowledge Base
 ==========================================================
 """
 
+# ==========================================================
+# FIX PYTHON IMPORT PATH
+# ==========================================================
+
+import os
+import sys
+
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..")
+)
+
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+# ==========================================================
+# IMPORTS
+# ==========================================================
+
 from config import (
     BUSINESS_DATA,
     BUSINESS_DB,
@@ -14,6 +32,10 @@ from rag.loader import PDFLoader
 from rag.splitter import DocumentSplitter
 from rag.vector_store import VectorStoreManager
 
+
+# ==========================================================
+# BUILD VECTOR DATABASE
+# ==========================================================
 
 def main():
 
@@ -25,9 +47,13 @@ def main():
     loader = PDFLoader(BUSINESS_DATA)
     documents = loader.load_documents()
 
+    print(f"Loaded {len(documents)} documents")
+
     # Split Documents
     splitter = DocumentSplitter()
     chunks = splitter.split(documents)
+
+    print(f"Created {len(chunks)} chunks")
 
     # Create Vector Store
     manager = VectorStoreManager()
@@ -39,8 +65,13 @@ def main():
         BUSINESS_DB,
     )
 
-    print("\nBusiness Knowledge Base Created Successfully!")
+    print("\n✅ Business Knowledge Base Created Successfully!")
+    print(f"Saved to: {BUSINESS_DB}")
 
+
+# ==========================================================
+# MAIN
+# ==========================================================
 
 if __name__ == "__main__":
     main()
