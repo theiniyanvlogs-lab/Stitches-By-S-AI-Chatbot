@@ -1,194 +1,241 @@
 # 👗 Stitches By S AI Chatbot
 
-## AI-Powered Multi-Agent Tailoring Knowledge Assistant
+> **AI-Powered Multi-Agent Tailoring Knowledge Assistant using LangGraph, LangChain, RAG, FAISS, Groq LLM, and Gradio**
 
-Stitches By S AI Chatbot is an intelligent Multi-Agent AI application built using **LangGraph**, **LangChain**, **Groq LLM**, **FAISS**, and **Gradio**.
-
-The chatbot assists tailoring professionals and customers by answering questions related to fabrics, tailoring techniques, measurements, stitching methods, pricing, and tailoring business management using Retrieval-Augmented Generation (RAG).
-
----
-
-# Features
-
-- Multi-Agent AI Architecture
-- LangGraph Workflow
-- Retrieval-Augmented Generation (RAG)
-- FAISS Vector Database
-- Groq LLM Integration
-- PDF Knowledge Base
-- Conversation Memory
-- Professional Gradio Interface
-- Modular Python Code
-- Hugging Face Deployment Ready
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
+![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
+![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-orange)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-red)
+![Groq](https://img.shields.io/badge/LLM-Groq-purple)
+![Gradio](https://img.shields.io/badge/UI-Gradio-blue)
 
 ---
 
-# AI Expert Agents
+# 📌 Project Overview
 
-### 🧵 Fabric Expert
+**Stitches By S AI Chatbot** is an intelligent **Multi-Agent AI Assistant** designed for the tailoring and fashion industry.
 
-- Fabric Selection
-- Fabric Properties
+The chatbot understands tailoring, fabrics, garment stitching, measurements, sewing techniques, and tailoring business management using **Retrieval-Augmented Generation (RAG)**.
+
+Instead of relying only on an LLM, the chatbot retrieves accurate information from its own knowledge base stored in **FAISS Vector Databases**.
+
+---
+
+# 🎯 Objectives
+
+- Build a Tailoring AI Assistant
+- Implement Multi-Agent AI architecture
+- Use Retrieval-Augmented Generation (RAG)
+- Learn LangGraph Agent Workflow
+- Perform Semantic Search using FAISS
+- Build an industry-specific AI knowledge assistant
+
+---
+
+# 🚀 Features
+
+✅ Multi-Agent AI Architecture
+
+✅ Supervisor Agent
+
+✅ Fabric Expert Agent
+
+✅ Tailoring Expert Agent
+
+✅ Business Expert Agent
+
+✅ Retrieval-Augmented Generation (RAG)
+
+✅ Semantic Search using FAISS
+
+✅ PDF Knowledge Base
+
+✅ LangGraph Workflow
+
+✅ Conversation Memory
+
+✅ Groq LLM Integration
+
+✅ Gradio Chat Interface
+
+---
+
+# 🧠 Multi-Agent Architecture
+
+```
+                     User Question
+                           │
+                           ▼
+                  Supervisor Agent
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+ Fabric Expert      Tailoring Expert     Business Expert
+        │                  │                  │
+        ▼                  ▼                  ▼
+      FAISS             FAISS             FAISS
+   Vector Store      Vector Store      Vector Store
+        │                  │                  │
+        └──────────────┬──────────────────────┘
+                       ▼
+                Retrieved Context
+                       ▼
+                  Groq LLM
+                       ▼
+                Final AI Response
+```
+
+---
+
+# 🤖 AI Agents
+
+## 🧵 Fabric Expert
+
+Answers questions related to
+
+- Cotton
+- Silk
+- Linen
+- Rayon
+- Polyester
 - Fabric Care
-- Seasonal Recommendations
-- Material Comparison
+- Fabric Selection
 
 ---
 
-### ✂️ Tailoring Expert
+## ✂️ Tailoring Expert
 
-- Measurements
-- Cutting
-- Stitching
-- Neck Designs
-- Sleeve Designs
-- Alterations
-- Sewing Tips
+Answers questions related to
+
+- Body Measurements
+- Stitch Types
+- Sewing Techniques
+- Pattern Making
+- Fabric Cutting
+- Tailoring Tips
 
 ---
 
-### 💼 Business Expert
+## 💼 Business Expert
 
+Answers questions related to
+
+- Tailoring Business
 - Pricing
-- Profit Calculation
 - Customer Management
 - Marketing
-- Order Management
 - Business Growth
+- Profit Planning
 
 ---
 
-# Technology Stack
+# 📚 RAG Knowledge Base
 
-| Technology | Purpose |
-|------------|----------|
-| Python | Programming Language |
-| LangChain | RAG Pipeline |
-| LangGraph | Multi-Agent Workflow |
-| Groq | Large Language Model |
-| Sentence Transformers | Embeddings |
-| FAISS | Vector Database |
-| Gradio | Web Interface |
-| PyPDF | PDF Loader |
-| Hugging Face Spaces | Deployment |
-| GitHub | Version Control |
+The chatbot retrieves knowledge from three independent vector databases.
+
+| Knowledge Base | Description |
+|---------------|-------------|
+| Fabric | Fabric properties, care, usage |
+| Tailoring | Measurements, stitching, sewing |
+| Business | Tailoring business management |
 
 ---
 
-# Project Architecture
+# 🧩 Technology Stack
 
-```text
-                    User
-                     │
-                     ▼
-              Gradio Interface
-                     │
-                     ▼
-             LangGraph Workflow
-                     │
-              Supervisor Agent
-      ┌──────────────┼──────────────┐
-      ▼              ▼              ▼
-Fabric Agent   Tailoring Agent   Business Agent
-      │              │              │
-      ▼              ▼              ▼
- Fabric DB      Tailoring DB    Business DB
-      │              │              │
-      └──────────────┼──────────────┘
-                     ▼
-                  Groq LLM
-                     │
-                     ▼
-              Professional Answer
+| Category | Technology |
+|----------|------------|
+| Language | Python |
+| Framework | LangChain |
+| Multi-Agent | LangGraph |
+| LLM | Groq (Llama 3.3 70B) |
+| Embedding Model | all-MiniLM-L6-v2 |
+| Vector Database | FAISS |
+| PDF Loader | PyPDF |
+| UI | Gradio |
+| Memory | Conversation Memory |
+| Environment | Python Dotenv |
+
+---
+
+# 📂 Project Structure
+
 ```
-
----
-
-# Project Structure
-
-```text
-StitchesByS-AI-Chatbot/
-
-│
+Stitches-By-S-AI-Chatbot/
 
 ├── agents/
-
-├── graph/
-
-├── rag/
-
-├── prompts/
-
-├── memory/
-
-├── models/
-
-├── scripts/
-
-├── utils/
-
-├── data/
-
-├── vector_db/
-
-├── static/
-
-├── assets/
-
+│   ├── fabric_agent.py
+│   ├── tailoring_agent.py
+│   ├── business_agent.py
+│   └── supervisor.py
 │
-
+├── graph/
+│   ├── workflow.py
+│   ├── nodes.py
+│   └── state.py
+│
+├── rag/
+│   ├── loader.py
+│   ├── splitter.py
+│   ├── embeddings.py
+│   ├── retriever.py
+│   └── vector_store.py
+│
+├── memory/
+│
+├── prompts/
+│
+├── models/
+│
+├── scripts/
+│
+├── utils/
+│
+├── data/
+│
+├── vector_db/
+│
 ├── app.py
-
 ├── config.py
-
 ├── requirements.txt
-
-├── README.md
-
-└── LICENSE
+└── README.md
 ```
 
 ---
 
-# Installation
+# ⚙️ Installation
+
+Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/StitchesByS-AI-Chatbot.git
+git clone https://github.com/theiniyanvlogs-lab/Stitches-By-S-AI-Chatbot.git
+```
 
-cd StitchesByS-AI-Chatbot
+Move into the project
 
-python -m venv venv
+```bash
+cd Stitches-By-S-AI-Chatbot
+```
 
-source venv/bin/activate
+Install dependencies
 
+```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-# Environment Variable
+# 🔑 Environment Variables
 
 Create a `.env` file
 
-```text
+```
 GROQ_API_KEY=YOUR_GROQ_API_KEY
 ```
 
 ---
 
-# Build Knowledge Base
-
-```bash
-python scripts/build_fabric_db.py
-
-python scripts/build_tailoring_db.py
-
-python scripts/build_business_db.py
-```
-
----
-
-# Run Application
+# ▶️ Run Application
 
 ```bash
 python app.py
@@ -196,50 +243,92 @@ python app.py
 
 ---
 
-# Example Questions
+# 💬 Sample Questions
 
 ### Fabric
 
-- Which fabric is best for summer?
-- What is the difference between cotton and linen?
+- Explain cotton fabric.
+- What are the advantages of cotton?
+- How should I wash cotton garments?
 
 ### Tailoring
 
-- How do I take blouse measurements?
-- How do I stitch a princess-cut blouse?
+- Explain back stitch.
+- How do I take body measurements?
+- What are the common stitch types?
 
 ### Business
 
-- How should I price a designer blouse?
-- How can I increase tailoring orders?
+- How can I grow my tailoring business?
+- How should I price tailoring services?
+- Give me tailoring marketing ideas.
 
 ---
 
-# Future Improvements
+# 📈 Future Improvements
 
-- Voice Chat
-- Image Upload
-- OCR for Measurement Sheets
-- Speech-to-Text
-- Text-to-Speech
-- WhatsApp Integration
-- Customer Order Tracking
-- Appointment Scheduling
-
----
-
-# License
-
-MIT License
+- Voice-based chatbot
+- Multilingual support
+- Image-based fabric identification
+- AI blouse design recommendations
+- Tailoring pattern generation
+- WhatsApp chatbot integration
+- Mobile application
+- Admin Dashboard
+- Cloud Deployment
 
 ---
 
-# Author
+# 📸 Screenshots
+
+(Add your chatbot screenshots here)
+
+---
+
+# 🎓 Learning Outcomes
+
+This project demonstrates practical knowledge of
+
+- Multi-Agent AI
+- Agent Routing
+- LangGraph
+- LangChain
+- Retrieval-Augmented Generation
+- FAISS
+- Prompt Engineering
+- Vector Databases
+- Semantic Search
+- LLM Integration
+- AI Chatbot Development
+
+---
+
+# 👨‍💻 Author
 
 **Sugumar R**
 
-MBA | AI Developer
+MBA | AI Developer | Multi-Agent AI Enthusiast
 
-AI-Powered Multi-Agent Applications
+📧 contact.sugumarai@gmail.com
 
-GitHub Portfolio Project
+GitHub
+
+https://github.com/theiniyanvlogs-lab
+
+---
+
+# ⭐ Support
+
+If you found this project useful,
+
+⭐ Star this repository
+
+🍴 Fork the repository
+
+🤝 Contribute improvements
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
